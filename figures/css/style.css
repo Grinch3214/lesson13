@@ -1,0 +1,116 @@
+/*Обнуление*/
+*{padding: 0;margin: 0;border: 0;}
+*,*:before,*:after{-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+nav,footer,header,aside{display: block;}
+html,body{height:100%;width:100%;font-size:100%;line-height:1;font-size:14px;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
+input,button,textarea{font-family:inherit;}
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner{padding:0;border:0;}
+a,a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
+/*--------------------*/
+body{
+	background: #aaa;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+/*	overflow: hidden;
+	animation: night ease-in-out 7s infinite alternate;*/
+}
+
+.container {
+	position: relative;
+}
+.screw {
+	height: 60px;
+	width: 210px;
+	background: #265;
+	position: absolute;
+	top: 200px;
+	left: 200px;
+}
+.screw:before {
+	content: '';
+	position: absolute;
+	top: -25px;
+	left: -20px;
+	height: 110px;
+	width: 60px;
+	background: transparent;
+	border-top: 50px solid #265;
+	border-bottom: 50px solid #265;
+	border-right: 45px solid #265;
+	border-top-left-radius: 50px;
+	border-bottom-left-radius: 50px;
+}
+.screw:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 50px;
+	height: 60px;
+	width: 160px;
+	background: repeating-linear-gradient(-80deg, transparent, transparent 3px, black 3px, black 6px);
+}
+
+.nut {
+	height: 140px;
+	width: 80px;
+	position: absolute;
+	top: 150px;
+	left: 600px;
+	background: radial-gradient(circle, transparent, transparent 40%, #265 40%, #265 100%);
+}
+.nut:before, .nut:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: -60px;
+	height: 140px;
+	width: 0px;
+	border-left: 20px solid transparent;
+	border-right: 40px solid #265;
+	border-top: 70px solid transparent;
+	border-bottom: 70px solid transparent;
+}
+.nut:after{
+	left: 80px;
+	border-left: 40px solid #265;
+	border-right: 20px solid transparent;
+}
+.key {
+	height: 240px;
+	width: 60px;
+	background: #265;
+	position: absolute;
+	top: 100px;
+	left: 1000px;
+	transform: rotate(-45deg);
+}
+.key:before {
+	content: '';
+	position: absolute;
+	top: -80px;
+	left: -40px;
+	width: 140px;
+	height: 120px;
+	background: transparent;
+	border-left: 40px solid #265;
+	border-right: 40px solid #265;
+	border-bottom: 40px solid #265;
+	border-radius: 25% 25% 50% 50%;
+}
+.key:after {
+	content: '';
+	position: absolute;
+	bottom: -50px;
+	left: 0;
+	width: 60px;
+	height: 60px;
+	background: radial-gradient(circle, transparent, transparent 40%, #265 40%, #265 100%);
+	border-radius: 0 0 50% 50%;
+}
